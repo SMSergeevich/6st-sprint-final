@@ -26,8 +26,8 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 2. Получаем файл из формы.
-	// Имя поля "file" должно совпадать с name="file" в index.html.
-	file, header, err := r.FormFile("file")
+	// Имя поля "myFile" должно совпадать с name="myFile" в index.html.
+	file, header, err := r.FormFile("myFile")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
